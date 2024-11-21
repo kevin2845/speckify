@@ -37,7 +37,7 @@ function Content() {
   };
 
   return (
-    <PanelSection title="Panel Section">
+    <PanelSection title="Debug Test!!!!">
       <PanelSectionRow>
         <ButtonItem
           layout="below"
@@ -100,7 +100,7 @@ export default definePlugin(() => {
     // The name shown in various decky menus
     name: "Test Plugin",
     // The element displayed at the top of your plugin's menu
-    titleView: <div className={staticClasses.Title}>Decky Example Plugin</div>,
+    titleView: <div className={staticClasses.Title}>Spotify Player</div>,
     // The content of your plugin's menu
     content: <Content />,
     // The icon displayed in the plugin list

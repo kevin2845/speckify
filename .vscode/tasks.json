@@ -17,6 +17,9 @@
         },
         //pnpm setup task to grab all needed modules
         {
+            "osx": {
+                "command": "echo \"Skipping PNPM commands on OSX\""
+            },
             "label": "pnpmsetup",
             "type": "shell",
             "group": "none",
@@ -34,7 +37,7 @@
                 "pnpmsetup",
                 "updatefrontendlib"
             ],
-            "problemMatcher": []
+            "problemMatcher": [],
         },
         //Preliminary Deploy Config Setup
         {
@@ -122,6 +125,9 @@
         //GENERAL TASKS
         //Update Decky Frontend Library, aka DFL
         {
+            "osx": {
+                "command": "echo \"Skipping PNPM commands on OSX\""
+            },
             "label": "updatefrontendlib",
             "type": "shell",
             "group": "build",
