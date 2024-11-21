@@ -9,5 +9,5 @@ if [ "$(uname)" == "Linux" ]; then
 else
     printf "Please input sudo password to proceed.\n"
     echo $sudopass | sudo -E $CLI_LOCATION/decky plugin build $(pwd)
-    # $CLI_LOCATION/decky plugin build $(pwd)
+    $CLI_LOCATION/decky plugin build $(pwd)
 fi

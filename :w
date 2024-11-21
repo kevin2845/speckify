@@ -23,7 +23,7 @@ import { FaShip } from "react-icons/fa";
 //  the first one: [first: number, second: number] is for the arguments
 //  the second one: number is for the return value
 const add = callable<[first: number, second: number], number>("add");
-const getTime = callable<[], string>("getTime");
+const getTime = callable<[], string>("get_time")
 
 // This function calls the python function "start_timer", which takes in no arguments and returns nothing.
 // It starts a (python) timer which eventually emits the event 'timer_event'
@@ -34,7 +34,6 @@ const startTimer = callable<[], void>("start_timer");
 function Content() {
   const [result, setResult] = useState<number | undefined>();
   const [time, setTime] = useState<string | undefined>();
-
   const onClick = async () => {
     const result = await add(Math.random(), Math.random());
     setResult(result);
@@ -42,9 +41,7 @@ function Content() {
  const onClick2 = async () => {
     const result = await getTime();
     setTime(result);
-    console.log(result);
-    console.log(time);
-    };
+    }
 
   return (
     <PanelSection title="backend tests">
@@ -70,7 +67,7 @@ function Content() {
           layout="below"
           onClick={onClick2}
         >
-          {time ?? "get the current time"}
+          {result ?? "Add two numbers via Python"}
         </ButtonItem>
       </PanelSectionRow>
 

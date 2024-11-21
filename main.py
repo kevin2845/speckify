@@ -5,11 +5,15 @@ import os
 # and add the `decky-loader/plugin/imports` path to `python.analysis.extraPaths` in `.vscode/settings.json`
 import decky
 import asyncio
+import datetime
 
 class Plugin:
     # A normal method. It can be called from the TypeScript side using @decky/api.
     async def add(self, left: int, right: int) -> int:
         return left + right
+
+    async def getTime(self):
+        return datetime.datetime.now()
 
     async def long_running(self):
         await asyncio.sleep(15)
